@@ -2,6 +2,10 @@
 
 This app is a simple memory game where the goal is to match cards after they've all been shown for 5 seconds.
 
+## Play Online
+
+Play the Memory Game online at: [https://catuga.github.io/memory/](https://catuga.github.io/memory/)
+
 ## Project Setup
 
 ```sh
