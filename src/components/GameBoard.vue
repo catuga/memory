@@ -31,9 +31,13 @@
               v-else
               @click="flipCard(index)"
               :class="{ 'cursor-pointer': !card.flipped }"
-              class="absolute inset-0 flex justify-center items-center"
+              class="absolute inset-0 flex justify-center items-center p-3"
             >
-              <span class="md:text-2xl">?</span>
+              <img
+                alt="Signo de pregunta"
+                src="../assets/images/question-mark.png"
+                class="max-h-full max-v-auto"
+              />
             </div>
           </div>
         </div>
