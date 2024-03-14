@@ -33,11 +33,7 @@
               :class="{ 'cursor-pointer': !card.flipped }"
               class="absolute inset-0 flex justify-center items-center p-3"
             >
-              <img
-                alt="Signo de pregunta"
-                src="../assets/images/question-mark.png"
-                class="max-h-full max-v-auto"
-              />
+              <img alt="Signo de pregunta" :src="questionMarkImage" class="max-h-full max-v-auto" />
             </div>
           </div>
         </div>
@@ -49,6 +45,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
+import questionMarkImage from '@/assets/images/question-mark.png'
 
 const cards = ref([])
 const score = ref({ hits: 0, misses: 0 })
