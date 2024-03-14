@@ -33,7 +33,11 @@
               :class="{ 'cursor-pointer': !card.flipped }"
               class="absolute inset-0 flex justify-center items-center p-3"
             >
-              <img alt="Signo de pregunta" :src="questionMarkImage" class="max-h-full max-v-auto" />
+              <img
+                alt="Signo de pregunta"
+                :src="questionMarkImageSrc"
+                class="max-h-full max-v-auto"
+              />
             </div>
           </div>
         </div>
@@ -46,13 +50,14 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import { useAsset } from '../utils/useAsset'
+import questionMarkImage from '@/assets/images/question-mark.png'
 
 const cards = ref([])
 const score = ref({ hits: 0, misses: 0 })
 const gameStarted = ref(false)
 const countdown = ref(5)
 const emit = defineEmits(['game-won'])
-const questionMarkImage = useAsset('assets/images/question-mark.png')
+const questionMarkImageSrc = useAsset(questionMarkImage)
 
 let cardToCheck = null
 let lockBoard = false
