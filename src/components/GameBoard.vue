@@ -45,13 +45,15 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
-import questionMarkImage from '@/assets/images/question-mark.png'
+import { useAsset } from '../utils/useAsset'
 
 const cards = ref([])
 const score = ref({ hits: 0, misses: 0 })
 const gameStarted = ref(false)
 const countdown = ref(5)
 const emit = defineEmits(['game-won'])
+const questionMarkImage = useAsset('assets/images/question-mark.png')
+
 let cardToCheck = null
 let lockBoard = false
 
